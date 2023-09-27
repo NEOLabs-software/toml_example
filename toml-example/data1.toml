@@ -1,0 +1,13 @@
+# example toml file
+#---------------------------------------------------------------
+
+# you can put as much info as you want, it will still print out
+
+[things_about_yourself]
+name = ""
+
+
+[fun_facts]
+# same here
+
+instructions = "read the instructions.txt in the toml-example folder"

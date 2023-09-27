@@ -1,0 +1,7 @@
+[example]
+context = "to view what is happening, open main.py"
+
+[extra]
+e = "e"
+a = "a"
+u = "u"

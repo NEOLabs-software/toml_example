@@ -1,0 +1,681 @@
+----------------------instructions--------------------
+------------------------------------------------------
+
+this will show you how you can start implementing toml
+files into your project
+
+
+-----------------getting python ready-----------------
+
+this example uses tomli, the old version of tomllib so
+just replace everything that says tomli with tomllib
+
+
+what you will do is you import the tomllib library
+
+> you do have to install it first with pip install
+
+`import tomllib`
+
+then copy and paste this piece of code into the 
+begining of your python file 
+
+`with open("[toml_name_here]", "rb") as f:
+    data = tomllib.load(f)`
+
+replace [toml_name_here] with the name of your toml 
+file
+
+
+----getting variables and values out of toml file----
+
+
+here we are going to asign the information into 
+variables
+
+say you want to get the whole toml file printed out,
+
+we already asigned the toml file into a variable so 
+the only thing we have to do is print it out
+
+`print(data)`
+
+but what if you only want one section?
+well when toml parses the data, it works like a 
+dictionary
+
+`section = data["section"]`
+
+so you replace section with the section name
+
+but what about only one variable in one section?
+
+same thing
+
+`print(data["section"]["variable"])`
+
+just add another brace
+
+
+
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                    #                             
+                                                                                                   @ @                            
+                              ,%@@@@@@@@@@(                                                       @%%%&                           
+                         %@@#                @@@,,&@@@@@@@@%(///%@@@@@                           @    ,#                          
+                      &@(              *((*      @@#                  *@,                                                         
+                    @@                      %@%     @@./(%&&@@@@*      &@                                                         
+                  @@                           /     #@.        @     /@                                                          
+                 @%                                   &@      .(     @&                                                           
+                @&                                  @@,           .@&                                                             
+             .@@@                               %@@,            @@.     @.   @   @....   .@, *@    @         @,     @..&#   @* %# 
+          (@@  /@                         .&@@&              @@,        @ @  @   @(((,  .&     @   @        @ %.    @%%@    .@@.  
+       %@@     (@                   %@@@@.       .       (@@            @  ,&@   @       @    ,@   @       @   &    @   @   @   @ 
+     @@     @   @,        .(@@@@@(           %@      *@@@@                                                                        
+   @@    @@     &@@@@@@&*             .@@@(      %@@#  ,@                                                                         
+ /@.    @,                    ,%@@@@(      ,@@@%      /@.                                                                         
+.@      @            ,&@@@&%         (@@@&           @@                                                                           
+#@                           (@@@@@.               @@                                                                             
+ .@@%.          ./#&@@@@@@/                    ,@@*                                                                               
+                           &@@@(          %@@@(                  @    @   #.  #*  .#        @,%      @     %    @    %/   @@   @  
+                                                                //        #&&@    .%...    &  *(     @     %   &.     @   @  @ @  
+                                                                 ,@*,&&   #.  @   .%***   &.   #.    @     %    /@,,@&    @   #@  
+                                                            
+
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                    #                             
+                                                                                                   @ @                            
+                              ,%@@@@@@@@@@(                                                       @%%%&                           
+                         %@@#                @@@,,&@@@@@@@@%(///%@@@@@                           @    ,#                          
+                      &@(              *((*      @@#                  *@,                                                         
+                    @@                      %@%     @@./(%&&@@@@*      &@                                                         
+                  @@                           /     #@.        @     /@                                                          
+                 @%                                   &@      .(     @&                                                           
+                @&                                  @@,           .@&                                                             
+             .@@@                               %@@,            @@.     @.   @   @....   .@, *@    @         @,     @..&#   @* %# 
+          (@@  /@                         .&@@&              @@,        @ @  @   @(((,  .&     @   @        @ %.    @%%@    .@@.  
+       %@@     (@                   %@@@@.       .       (@@            @  ,&@   @       @    ,@   @       @   &    @   @   @   @ 
+     @@     @   @,        .(@@@@@(           %@      *@@@@                                                                        
+   @@    @@     &@@@@@@&*             .@@@(      %@@#  ,@                                                                         
+ /@.    @,                    ,%@@@@(      ,@@@%      /@.                                                                         
+.@      @            ,&@@@&%         (@@@&           @@                                                                           
+#@                           (@@@@@.               @@                                                                             
+ .@@%.          ./#&@@@@@@/                    ,@@*                                                                               
+                           &@@@(          %@@@(                  @    @   #.  #*  .#        @,%      @     %    @    %/   @@   @  
+                                                                //        #&&@    .%...    &  *(     @     %   &.     @   @  @ @  
+                                                                 ,@*,&&   #.  @   .%***   &.   #.    @     %    /@,,@&    @   #@  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+
+Send us your most beautiful results!
+Link to this page: “Ascii Art converter”
+
+You can link to this tool using this HTML code. Simply copy and paste it into your page:
+
+<a href="https://manytools.org/hacker-tools/convert-images-to-ascii-art/">ASCII art generator for geeks! - Convert images/pictures to ASCII art online! (HTML/text)</a>
+
+If you have any problems using this Convert Images to Ascii Art, please contact me.
+Updates
+August 15, 2022
+hack stega
+Steganography tool fixed (server errors)
+
+The past few weeks you may have seen a server error or two on the steganography tool. These intermittent errors were a byproduct of the recent server move and have now been fixed.
+July 15, 2022
+Phasing out hosting server after (almost) 10 years
+
+After having been running steadily on the previous server for almost ten(!) years, it became time to retire that machine. So, ManyTools has now been moved to a shiny new hosting cluster. You may/should notice some speed improvements. In case you notice any problems or irregularities I'd be happy if you notify me so I can check on them.
+September 27, 2017
+Exit Coinhive (in-browser bitcoin mining)
+
+Thank you for your feedback on our (brief) test with browser based bitcoin mining. This seemed like a nice way to support this website, but turned out to be far too much of a burden to our visitors. So we've decided to remove it. Our apologies for the inconvenience it has caused.
+August 18, 2017
+Migrated to HTTPS
+
+Happy to inform that Manytools is now fully Chrome-62-ready, thanks Google! A secure connection had been due for a very long time. Today we finally got around to upgrading the site to run on HTTPS. – (Starting October 2017, Chrome (version 62) will show a “NOT SECURE” warning when users enter text in a form on an HTTP page, and for all HTTP pages in Incognito mode.)
+August 10, 2016
+article personal
+Who is this person?
+
+Quickly lookup any person by e-mail address or name. Run an instant background check or find contact details & personal records (including public legal records).
+
+    Network
+    My IP
+    Ping
+    Traceroute
+    DNS record
+    DNSSEC test
+    Whois
+    Password generator
+
+	
+
+    HTTP, HTML & Text
+    Apple-touch-icon generator
+    Browser language
+    Favicon generator
+    Image to data-URI
+    Lipsum generator
+    Obfuscate Email address
+    Request headers
+    String manipulation
+    User-Agent string
+
+	
+
+    CSS3
+    CSS3 Border radius tool
+    CSS3 box shadow code tool
+    CSS3 text shadow tool
+    CSS3 Gradient code tool
+
+	
+
+    Image
+    B&W or Sepia image
+    Colorize images
+    Rotate image online
+
+	
+
+    Social
+    WhatsApp ‘Read more’
+    Message text-banners
+    ✿ Smileys & Icons ☚
+    Upside uʍop text
+    S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶ text
+    Ⓑⓤⓑⓑⓛⓔ text tool
+    Sᴍᴀʟʟᴄᴀᴘs text tool
+
+	
+
+    Finance
+    Compound interest calculator
+    Loan Interest Calculator
+
+	
+
+    Hacker
+    ASCII banners
+    Ascii Art converter
+    ANSI Art converter
+    Steganography
+    Image to Byte array
+
+	
+
+    Handy
+    Barcode encoder
+    BMI calculator
+    BMR calculator
+    Lookup a person
+    Sudoku generator
+    Unitconverter
+
+	
+
+    New Page
+
+	
+
+Manytools is a collection of tools to automate the repetitive jobs involved in webdevelopment (or any other job).
+
+Manytools is a project by Michael van Schaik, a webdeveloper from Rotterdam (NL). Michael co-owns internet agency Restruct Web, where he develops websites & apps (web & iPhone/Android).
+
+Twitter Facebook Linkedin
+
+Manytools, your online toolshed © 2011-[currentyear] | Got an idea for a handy tool you'd like us to include? Contact us!
+
+This website as well as the generated output are intended solely for non-commercial and/or private use. The use is permitted only for legal purposes and according to the valid national or international regulations. The functionality and/or uninterrupted availability of this free service can’t be guaranteed. Commercial use is only permitted after approval by Manytools in writing. | Privacy policy | Disclaimer
+
+Manytools.org - logo Your online toolshed
+
+    Home Network
+      HTTP, HTML & Text
+      CSS3
+      Image
+      Social
+      Finance
+      Hacker
+      Handy
+      Contact New Page 
+
+Hacker Tools
+
+    ASCII banners
+    Ascii Art converter
+    ANSI Art converter
+    Steganography
+    Image to Byte array
+
+    I
+    Hacker
+    Ascii Art converter
+
+Convert Images to Ascii Art
+
+Use ASCII art on Facebook & Twitter! 
+(or anywhere else)
+
+ASCII art generator for geeks!
+
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                    #                             
+                                                                                                   @ @                            
+                              ,%@@@@@@@@@@(                                                       @%%%&                           
+                         %@@#                @@@,,&@@@@@@@@%(///%@@@@@                           @    ,#                          
+                      &@(              *((*      @@#                  *@,                                                         
+                    @@                      %@%     @@./(%&&@@@@*      &@                                                         
+                  @@                           /     #@.        @     /@                                                          
+                 @%                                   &@      .(     @&                                                           
+                @&                                  @@,           .@&                                                             
+             .@@@                               %@@,            @@.     @.   @   @....   .@, *@    @         @,     @..&#   @* %# 
+          (@@  /@                         .&@@&              @@,        @ @  @   @(((,  .&     @   @        @ %.    @%%@    .@@.  
+       %@@     (@                   %@@@@.       .       (@@            @  ,&@   @       @    ,@   @       @   &    @   @   @   @ 
+     @@     @   @,        .(@@@@@(           %@      *@@@@                                                                        
+   @@    @@     &@@@@@@&*             .@@@(      %@@#  ,@                                                                         
+ /@.    @,                    ,%@@@@(      ,@@@%      /@.                                                                         
+.@      @            ,&@@@&%         (@@@&           @@                                                                           
+#@                           (@@@@@.               @@                                                                             
+ .@@%.          ./#&@@@@@@/                    ,@@*                                                                               
+                           &@@@(          %@@@(                  @    @   #.  #*  .#        @,%      @     %    @    %/   @@   @  
+                                                                //        #&&@    .%...    &  *(     @     %   &.     @   @  @ @  
+                                                                 ,@*,&&   #.  @   .%***   &.   #.    @     %    /@,,@&    @   #@  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+
+Send us your most beautiful results!
+Link to this page: “Ascii Art converter”
+
+You can link to this tool using this HTML code. Simply copy and paste it into your page:
+
+<a href="https://manytools.org/hacker-tools/convert-images-to-ascii-art/">ASCII art generator for geeks! - Convert images/pictures to ASCII art online! (HTML/text)</a>
+
+If you have any problems using this Convert Images to Ascii Art, please contact me.
+Updates
+August 15, 2022
+hack stega
+Steganography tool fixed (server errors)
+
+The past few weeks you may have seen a server error or two on the steganography tool. These intermittent errors were a byproduct of the recent server move and have now been fixed.
+July 15, 2022
+Phasing out hosting server after (almost) 10 years
+
+After having been running steadily on the previous server for almost ten(!) years, it became time to retire that machine. So, ManyTools has now been moved to a shiny new hosting cluster. You may/should notice some speed improvements. In case you notice any problems or irregularities I'd be happy if you notify me so I can check on them.
+September 27, 2017
+Exit Coinhive (in-browser bitcoin mining)
+
+Thank you for your feedback on our (brief) test with browser based bitcoin mining. This seemed like a nice way to support this website, but turned out to be far too much of a burden to our visitors. So we've decided to remove it. Our apologies for the inconvenience it has caused.
+August 18, 2017
+Migrated to HTTPS
+
+Happy to inform that Manytools is now fully Chrome-62-ready, thanks Google! A secure connection had been due for a very long time. Today we finally got around to upgrading the site to run on HTTPS. – (Starting October 2017, Chrome (version 62) will show a “NOT SECURE” warning when users enter text in a form on an HTTP page, and for all HTTP pages in Incognito mode.)
+August 10, 2016
+article personal
+Who is this person?
+
+Quickly lookup any person by e-mail address or name. Run an instant background check or find contact details & personal records (including public legal records).
+
+    Network
+    My IP
+    Ping
+    Traceroute
+    DNS record
+    DNSSEC test
+    Whois
+    Password generator
+
+	
+
+    HTTP, HTML & Text
+    Apple-touch-icon generator
+    Browser language
+    Favicon generator
+    Image to data-URI
+    Lipsum generator
+    Obfuscate Email address
+    Request headers
+    String manipulation
+    User-Agent string
+
+	
+
+    CSS3
+    CSS3 Border radius tool
+    CSS3 box shadow code tool
+    CSS3 text shadow tool
+    CSS3 Gradient code tool
+
+	
+
+    Image
+    B&W or Sepia image
+    Colorize images
+    Rotate image online
+
+	
+
+    Social
+    WhatsApp ‘Read more’
+    Message text-banners
+    ✿ Smileys & Icons ☚
+    Upside uʍop text
+    S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶ text
+    Ⓑⓤⓑⓑⓛⓔ text tool
+    Sᴍᴀʟʟᴄᴀᴘs text tool
+
+	
+
+    Finance
+    Compound interest calculator
+    Loan Interest Calculator
+
+	
+
+    Hacker
+    ASCII banners
+    Ascii Art converter
+    ANSI Art converter
+    Steganography
+    Image to Byte array
+
+	
+
+    Handy
+    Barcode encoder
+    BMI calculator
+    BMR calculator
+    Lookup a person
+    Sudoku generator
+    Unitconverter
+
+	
+
+    New Page
+
+	
+
+Manytools is a collection of tools to automate the repetitive jobs involved in webdevelopment (or any other job).
+
+Manytools is a project by Michael van Schaik, a webdeveloper from Rotterdam (NL). Michael co-owns internet agency Restruct Web, where he develops websites & apps (web & iPhone/Android).
+
+Twitter Facebook Linkedin
+
+Manytools, your online toolshed © 2011-[currentyear] | Got an idea for a handy tool you'd like us to include? Contact us!
+
+This website as well as the generated output are intended solely for non-commercial and/or private use. The use is permitted only for legal purposes and according to the valid national or international regulations. The functionality and/or uninterrupted availability of this free service can’t be guaranteed. Commercial use is only permitted after approval by Manytools in writing. | Privacy policy | Disclaimer
+
+Manytools.org - logo Your online toolshed
+
+    Home Network
+      HTTP, HTML & Text
+      CSS3
+      Image
+      Social
+      Finance
+      Hacker
+      Handy
+      Contact New Page 
+
+Hacker Tools
+
+    ASCII banners
+    Ascii Art converter
+    ANSI Art converter
+    Steganography
+    Image to Byte array
+
+    I
+    Hacker
+    Ascii Art converter
+
+Convert Images to Ascii Art
+
+Use ASCII art on Facebook & Twitter! 
+(or anywhere else)
+
+ASCII art generator for geeks!
+
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                    #                             
+                                                                                                   @ @                            
+                              ,%@@@@@@@@@@(                                                       @%%%&                           
+                         %@@#                @@@,,&@@@@@@@@%(///%@@@@@                           @    ,#                          
+                      &@(              *((*      @@#                  *@,                                                         
+                    @@                      %@%     @@./(%&&@@@@*      &@                                                         
+                  @@                           /     #@.        @     /@                                                          
+                 @%                                   &@      .(     @&                                                           
+                @&                                  @@,           .@&                                                             
+             .@@@                               %@@,            @@.     @.   @   @....   .@, *@    @         @,     @..&#   @* %# 
+          (@@  /@                         .&@@&              @@,        @ @  @   @(((,  .&     @   @        @ %.    @%%@    .@@.  
+       %@@     (@                   %@@@@.       .       (@@            @  ,&@   @       @    ,@   @       @   &    @   @   @   @ 
+     @@     @   @,        .(@@@@@(           %@      *@@@@                                                                        
+   @@    @@     &@@@@@@&*             .@@@(      %@@#  ,@                                                                         
+ /@.    @,                    ,%@@@@(      ,@@@%      /@.                                                                         
+.@      @            ,&@@@&%         (@@@&           @@                                                                           
+#@                           (@@@@@.               @@                                                                             
+ .@@%.          ./#&@@@@@@/                    ,@@*                                                                               
+                           &@@@(          %@@@(                  @    @   #.  #*  .#        @,%      @     %    @    %/   @@   @  
+                                                                //        #&&@    .%...    &  *(     @     %   &.     @   @  @ @  
+                                                                 ,@*,&&   #.  @   .%***   &.   #.    @     %    /@,,@&    @   #@  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+                                                                                                                                  
+
+Send us your most beautiful results!
+Link to this page: “Ascii Art converter”
+
+You can link to this tool using this HTML code. Simply copy and paste it into your page:
+
+<a href="https://manytools.org/hacker-tools/convert-images-to-ascii-art/">ASCII art generator for geeks! - Convert images/pictures to ASCII art online! (HTML/text)</a>
+
+If you have any problems using this Convert Images to Ascii Art, please contact me.
+Updates
+August 15, 2022
+hack stega
+Steganography tool fixed (server errors)
+
+The past few weeks you may have seen a server error or two on the steganography tool. These intermittent errors were a byproduct of the recent server move and have now been fixed.
+July 15, 2022
+Phasing out hosting server after (almost) 10 years
+
+After having been running steadily on the previous server for almost ten(!) years, it became time to retire that machine. So, ManyTools has now been moved to a shiny new hosting cluster. You may/should notice some speed improvements. In case you notice any problems or irregularities I'd be happy if you notify me so I can check on them.
+September 27, 2017
+Exit Coinhive (in-browser bitcoin mining)
+
+Thank you for your feedback on our (brief) test with browser based bitcoin mining. This seemed like a nice way to support this website, but turned out to be far too much of a burden to our visitors. So we've decided to remove it. Our apologies for the inconvenience it has caused.
+August 18, 2017
+Migrated to HTTPS
+
+Happy to inform that Manytools is now fully Chrome-62-ready, thanks Google! A secure connection had been due for a very long time. Today we finally got around to upgrading the site to run on HTTPS. – (Starting October 2017, Chrome (version 62) will show a “NOT SECURE” warning when users enter text in a form on an HTTP page, and for all HTTP pages in Incognito mode.)
+August 10, 2016
+article personal
+Who is this person?
+
+Quickly lookup any person by e-mail address or name. Run an instant background check or find contact details & personal records (including public legal records).
+
+    Network
+    My IP
+    Ping
+    Traceroute
+    DNS record
+    DNSSEC test
+    Whois
+    Password generator
+
+	
+
+    HTTP, HTML & Text
+    Apple-touch-icon generator
+    Browser language
+    Favicon generator
+    Image to data-URI
+    Lipsum generator
+    Obfuscate Email address
+    Request headers
+    String manipulation
+    User-Agent string
+
+	
+
+    CSS3
+    CSS3 Border radius tool
+    CSS3 box shadow code tool
+    CSS3 text shadow tool
+    CSS3 Gradient code tool
+
+	
+
+    Image
+    B&W or Sepia image
+    Colorize images
+    Rotate image online
+
+	
+
+    Social
+    WhatsApp ‘Read more’
+    Message text-banners
+    ✿ Smileys & Icons ☚
+    Upside uʍop text
+    S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶ text
+    Ⓑⓤⓑⓑⓛⓔ text tool
+    Sᴍᴀʟʟᴄᴀᴘs text tool
+
+	
+
+    Finance
+    Compound interest calculator
+    Loan Interest Calculator
+
+	
+
+    Hacker
+    ASCII banners
+    Ascii Art converter
+    ANSI Art converter
+    Steganography
+    Image to Byte array
+
+	
+
+    Handy
+    Barcode encoder
+    BMI calculator
+    BMR calculator
+    Lookup a person
+    Sudoku generator
+    Unitconverter
+
+	
+
+    New Page
+
+	
+
+Manytools is a collection of tools to automate the repetitive jobs involved in webdevelopment (or any other job).
+
+Manytools is a project by Michael van Schaik, a webdeveloper from Rotterdam (NL). Michael co-owns internet agency Restruct Web, where he develops websites & apps (web & iPhone/Android).
+
+Twitter Facebook Linkedin
+
+Manytools, your online toolshed © 2011-[currentyear] | Got an idea for a handy tool you'd like us to include? Contact us!
+
+This website as well as the generated output are intended solely for non-commercial and/or private use. The use is permitted only for legal purposes and according to the valid national or international regulations. The functionality and/or uninterrupted availability of this free service can’t be guaranteed. Commercial use is only permitted after approval by Manytools in writing. | Privacy policy | Disclaimer

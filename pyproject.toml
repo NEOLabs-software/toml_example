@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "toml-example"
+version = "0.1.0"
+description = "a toml parse example"
+authors = ["thayeeboi890 <thayeeboi890@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tomli = "^2.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
